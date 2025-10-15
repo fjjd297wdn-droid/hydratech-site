@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-19C3C99NLG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-19C3C99NLG');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Hydratech Industries — Vision, Mission, Impact</title>
+  <meta name="description" content="Hydratech Industries is building the future of water access. Discover our mission, story, and the vision behind HydraBox — clean water from air, anywhere on Earth." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About Hydratech Industries — Vision, Mission, Impact" />
+  <meta property="og:description" content="We’re turning air into water — sustainably, portably, and at scale. Learn how our mission and partners accelerate global impact." />
+  <meta property="og:url" content="https://hydratechindustries.org/about.html" />
+  <meta property="og:image" content="/assets/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="/favicon.png" />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#0b0b0b;
+      --muted:#5f6368;
+      --line:#e6e6e6;
+      --accent:#0a84ff;
+      --accent-ink:#064a96;
+      --card:#f7f7f8;
+      --glass:#ffffffcc;
+      --radius:18px;
+      --shadow:0 8px 30px rgba(0,0,0,.06);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background:var(--bg); color:var(--text);
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{opacity:.9}
+
+    .backdrop{
+      position:fixed; inset:-20vh -20vw; z-index:-1; filter:blur(80px) saturate(120%);
+      background: radial-gradient(60% 60% at 20% 30%, #c2e9ff88, transparent 60%),
+                  radial-gradient(40% 40% at 90% 10%, #b1ffd688, transparent 60%),
+                  radial-gradient(40% 40% at 70% 90%, #e7e6ff88, transparent 60%);
+    }
+
+    header{
+      position:sticky; top:0; backdrop-filter:saturate(180%) blur(10px);
+      background:var(--glass); border-bottom:1px solid var(--line); z-index:50;
+    }
+    .nav{max-width:1120px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:600}
+    .brand img{height:26px; width:26px}
+    .nav-links{display:flex; gap:22px; align-items:center}
+    .menu-btn{display:none}
+    @media (max-width:880px){
+      .nav-links{display:none}
+      .menu-btn{display:inline-flex; border:1px solid var(--line); background:#fff; border-radius:10px; padding:8px 10px}
+      .sheet{position:fixed; inset:64px 16px auto 16px; background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px; display:none; box-shadow:var(--shadow)}
+      .sheet a{display:block; padding:12px 8px; border-radius:10px}
+      .sheet a:hover{background:#f4f6f8}
+    }
+
+    .container{max-width:1120px; margin:0 auto; padding:0 20px}
+    .hero{padding:100px 0 56px; text-align:center}
+    .hero h1{font-size: clamp(36px, 6vw, 60px); letter-spacing:-.02em; margin:0 0 14px}
+    .hero p{color:var(--muted); max-width:860px; margin:0 auto 24px; font-size: clamp(16px, 2.4vw, 20px)}
+    .cta{display:inline-flex; align-items:center; gap:10px; padding:14px 20px; background:var(--accent); color:#fff; border-radius:999px; font-weight:600; box-shadow:var(--shadow)}
+
+    section{padding:64px 0; border-top:1px solid var(--line)}
+    h2{font-size: clamp(24px, 3.2vw, 36px); margin:0 0 12px}
+    p.lead{color:var(--muted); max-width:860px}
+
+    .grid{display:grid; gap:22px}
+    .two{grid-template-columns:1.05fr .95fr}
+    @media (max-width:900px){.two{grid-template-columns:1fr}}
+
+    .card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
+    .pill-row{display:flex; flex-wrap:wrap; gap:10px}
+    .pill{padding:10px 14px; border-radius:999px; border:1px solid var(--line); background:#fff; font-weight:600}
+
+    .kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    @media (max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}}
+    .kpi{padding:22px; border-radius:16px; background:#fff; border:1px solid var(--line)}
+    .kpi .big{font-size:26px; font-weight:700}
+    .muted{color:var(--muted)}
+
+    .feature{display:flex; gap:14px; background:#fff; border:1px solid var(--line); padding:18px; border-radius:16px}
+    .feature .dot{height:12px; width:12px; border-radius:50%; background:var(--accent); margin-top:6px}
+    .feature h4{margin:0 0 6px; font-size:18px}
+    .feature p{margin:0; color:var(--muted)}
+
+    footer{border-top:1px solid var(--line); padding:36px 0; color:var(--muted)}
+    footer .row{display:flex; justify-content:space-between; align-items:center; gap:14px}
+    @media (max-width:800px){footer .row{flex-direction:column; align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"></div>
+
+  <header>
+    <nav class="nav">
+      <a class="brand" href="/" aria-label="Hydratech Industries">
+        <img src="/assets/logo.svg" alt="Hydratech trident logo" /> Hydratech Industries
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about.html" aria-current="page">About</a>
+        <a href="/#technology">Technology</a>
+        <a href="/#hydrabox">HydraBox</a>
+        <a href="/#partners">Partners</a>
+        <a href="/#contact">Contact</a>
+      </div>
+      <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+    </nav>
+    <div class="sheet" id="menu">
+      <a href="/" onclick="toggleMenu()">Home</a>
+      <a href="/about.html" onclick="toggleMenu()">About</a>
+      <a href="/#technology" onclick="toggleMenu()">Technology</a>
+      <a href="/#hydrabox" onclick="toggleMenu()">HydraBox</a>
+      <a href="/#partners" onclick="toggleMenu()">Partners</a>
+      <a href="/#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero container">
+      <h1>About Hydratech Industries</h1>
+      <p>
+        We believe water should never be a privilege — it’s a human right. Our purpose is simple and audacious:
+        <strong>turn the invisible into the essential</strong> by transforming air into clean, drinkable water —
+        anytime, anywhere.
+      </p>
+      <a class="cta" href="/#contact">Partner with us</a>
+    </section>
+
+    <!-- STORY & VISION -->
+    <section>
+      <div class="container two grid" style="align-items:center">
+        <div>
+          <h2>Vision first. Product second.</h2>
+          <p class="lead">
+            Hydratech was founded in <strong>2025</strong> with a clear, immediate vision: deliver life-sustaining water
+            to the people and places that need it most — disaster zones, conflict regions, remote communities, and
+            off-grid living. From day one, we’ve built with intention: portable, rugged, serviceable, and ready for the field.
+          </p>
+          <p class="lead">
+            Our flagship system, <strong>HydraBox</strong>, is designed to produce <strong>2–5 liters/day</strong> of clean
+            water in typical conditions — powered by solar or AC. We focus on reliability, efficiency, and simplicity so that
+            deployment is measured in minutes, not months.
+          </p>
+        </div>
+        <div class="card">
+          <span class="pill">Mission</span>
+          <p style="margin:12px 0 0" class="muted">
+            Build the world’s most deployable atmospheric water platform and get it where it matters most — fast.
+          </p>
+          <div class="kpis" style="margin-top:16px">
+            <div class="kpi"><div class="big">2–5 L/day</div><div class="muted">Typical output</div></div>
+            <div class="kpi"><div class="big">Solar / AC</div><div class="muted">Power options</div></div>
+            <div class="kpi"><div class="big">Portable</div><div class="muted">One-person deploy</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPLES -->
+    <section>
+      <div class="container">
+        <h2>Design principles</h2>
+        <div class="grid" style="grid-template-columns:repeat(2,1fr); gap:18px">
+          <div class="feature"><div class="dot"></div><div><h4>Human-centered</h4><p>Purpose-built for field teams, communities, and rapid response.</p></div></div>
+          <div class="feature"><div class="dot"></div><div><h4>Reliable by design</h4><p>Few moving parts, easy service, and modular components.</p></div></div>
+          <div class="feature"><div class="dot"></div><div><h4>Energy-aware</h4><p>Optimized airflow and thermals to maximize liters per watt.</p></div></div>
+          <div class="feature"><div class="dot"></div><div><h4>Scale-ready</h4><p>From single-unit relief kits to networked deployments.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT / WHO WE SERVE -->
+    <section>
+      <div class="container two grid" style="align-items:center">
+        <div class="card">
+          <span class="pill">Who we serve</span>
+          <div class="pill-row" style="margin-top:14px">
+            <span class="pill">Disaster relief</span>
+            <span class="pill">Remote communities</span>
+            <span class="pill">Military & field ops</span>
+            <span class="pill">Off-grid living</span>
+            <span class="pill">NGO pilots</span>
+          </div>
+        </div>
+        <div>
+          <h2>Impact that compounds</h2>
+          <p class="lead">
+            Every liter produced on-site is a liter that didn’t require trucking, bottling, or fragile supply lines. Our goal is
+            to build a safer water future by reducing logistics risk and increasing local resilience — unit by unit,
+            community by community.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- R&D ETHOS -->
+    <section>
+      <div class="container two grid" style="align-items:center">
+        <div>
+          <h2>R&D with discipline</h2>
+          <p class="lead">
+            We iterate where it counts: field data, durability, and manufacturability. We partner with engineers,
+            researchers, and mission-driven organizations to accelerate reliability and deployment speed.
+          </p>
+        </div>
+        <div class="card">
+          <span class="pill">Collaboration</span>
+          <p class="muted" style="margin-top:12px">
+            If you’re an engineer, researcher, NGO, or investor aligned with our mission, we’d love to talk.
+          </p>
+          <div style="margin-top:14px">
+            <a class="cta" href="/#contact">Start a conversation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="container" style="text-align:center">
+        <h2>Let’s build the water future</h2>
+        <p class="lead" style="margin:0 auto 18px">
+          We’re moving fast. If you want to pilot, partner, or invest, reach out — we’ll get back quickly.
+        </p>
+        <a class="cta" href="mailto:info@hydratechindustries.org">info@hydratechindustries.org</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container row">
+      <div style="display:flex; align-items:center; gap:10px">
+        <img src="/assets/logo.svg" alt="Hydratech trident logo" style="height:20px; width:20px" />
+        <span>© 2025 Hydratech Industries — All rights reserved.</span>
+      </div>
+      <div class="pill-row">
+        <a class="link" href="/">Home</a>
+        <a class="link" href="/#hydrabox">HydraBox</a>
+        <a class="link" href="/#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(){
+      const el = document.getElementById('menu');
+      el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

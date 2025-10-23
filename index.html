@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en">
-<head> 
+<head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-19C3C99NLG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-19C3C99NLG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-19C3C99NLG');
+  </script>
 
-  gtag('config', 'G-19C3C99NLG');
-</script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hydratech Industries — Turning Air Into Water</title>
@@ -25,19 +25,12 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Hydratech Industries — Turning Air Into Water, Anytime, Anywhere" />
   <meta name="twitter:description" content="Join us in revolutionizing water access with HydraBox — compact, scalable, and built for global impact." />
-</head>
+
   <style>
     :root{
-      --bg:#ffffff;/* Apple-clean */
-      --text:#0b0b0b;
-      --muted:#5f6368;
-      --line:#e6e6e6;
-      --accent:#0a84ff;/* iOS system blue */
-      --accent-ink:#064a96;
-      --card:#f7f7f8; /* light card */
-      --glass:#ffffffcc;
-      --radius:18px;
-      --shadow:0 8px 30px rgba(0,0,0,.06);
+      --bg:#ffffff; --text:#0b0b0b; --muted:#5f6368; --line:#e6e6e6;
+      --accent:#0a84ff; --accent-ink:#064a96; --card:#f7f7f8;
+      --glass:#ffffffcc; --radius:18px; --shadow:0 8px 30px rgba(0,0,0,.06);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -109,29 +102,31 @@
     footer .row{display:flex; justify-content:space-between; align-items:center; gap:14px}
     @media (max-width:800px){footer .row{flex-direction:column; align-items:flex-start}}
 
-    /* nicer link styling */
     .link{color:var(--accent); font-weight:600; border-bottom:1px solid #bcd9ff; padding-bottom:2px}
     .btn-secondary{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:12px; border:1px solid var(--line); background:#fff; font-weight:600}
 
-    /* Mobile menu */
+    /* Mobile sheet — HIDE by default on all sizes to prevent duplicate links on desktop */
+    .sheet{display:none}
     @media (max-width:880px){
       .nav-links{display:none}
       .menu-btn{display:inline-flex; border:1px solid var(--line); background:#fff; border-radius:10px; padding:8px 10px}
-      .sheet{position:fixed; inset:64px 16px auto 16px; background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px; display:none; box-shadow:var(--shadow)}
-      .sheet a{display:block; padding:12px 8px; border-radius:10px}
+      .sheet{position:fixed; inset:64px 16px auto 16px; background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px; box-shadow:var(--shadow)}
+      .sheet a{display:block; padding:12px 8px; border-radius:10px; color:var(--text)}
       .sheet a:hover{background:#f4f6f8}
     }
   </style>
 </head>
 <body>
   <div class="backdrop" aria-hidden="true"></div>
+
+  <!-- Single, correct header -->
   <header>
     <nav class="nav">
       <a class="brand" href="#top" aria-label="Hydratech Industries">
         <img src="/assets/logo.svg" alt="Hydratech trident logo" /> Hydratech Industries
       </a>
       <div class="nav-links">
-        <a href="#about">About</a>
+        <a href="/about.html">About</a>
         <a href="#technology">Technology</a>
         <a href="#hydrabox">HydraBox</a>
         <a href="#rd">R&D</a>
@@ -140,8 +135,9 @@
       </div>
       <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button>
     </nav>
+    <!-- Mobile drawer -->
     <div class="sheet" id="menu">
-      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="/about.html" onclick="toggleMenu()">About</a>
       <a href="#technology" onclick="toggleMenu()">Technology</a>
       <a href="#hydrabox" onclick="toggleMenu()">HydraBox</a>
       <a href="#rd" onclick="toggleMenu()">R&D</a>
@@ -153,27 +149,28 @@
   <main id="top">
     <section class="hero container">
       <h1>Turning Air Into Water — Anywhere on Earth.</h1>
-      <p>Hydratech Industries is building next‑generation atmospheric water generation (AWG) systems to make clean water accessible, portable, and sustainable — starting with <strong>HydraBox</strong>, our compact field‑ready device delivering <strong>2–5 L/day</strong> from ambient air using solar or AC power.</p>
+      <p>Hydratech Industries is building next-generation atmospheric water generation (AWG) systems to make clean water accessible, portable, and sustainable — starting with <strong>HydraBox</strong>, our compact field-ready device delivering <strong>2–5 L/day</strong> from ambient air using solar or AC power.</p>
       <a class="cta" href="#contact">Get in touch</a>
     </section>
 
+    <!-- About teaser (links to full about page) -->
     <section id="about">
-  <div class="container" style="text-align:center">
-    <h2>About Hydratech Industries</h2>
-    <p>Learn more about our mission and story.</p>
-    <a class="cta" href="/about.html">Read more</a>
-  </div>
-</section>
+      <div class="container" style="text-align:center">
+        <h2>About Hydratech Industries</h2>
+        <p class="lead">Learn more about our mission and story.</p>
+        <a class="cta" href="/about.html">Read more</a>
+      </div>
+    </section>
 
     <section id="technology">
       <div class="container">
         <h2>Technology, engineered for the real world.</h2>
-        <p class="lead">We combine thermoelectric cooling, optimized airflow, and intelligent power management to maximize liters per watt — without fragile, hard‑to‑service parts.</p>
+        <p class="lead">We combine thermoelectric cooling, optimized airflow, and intelligent power management to maximize liters per watt — without fragile, hard-to-service parts.</p>
         <div class="feature-grid" style="margin-top:18px">
-          <div class="feature"><div class="dot"></div><div><h4>Energy‑Efficient AWG</h4><p>Condensation stack tuned for high yield per watt with adaptive fan curves and heat‑exchange design.</p></div></div>
-          <div class="feature"><div class="dot"></div><div><h4>Field‑Ready Durability</h4><p>Rugged enclosure, replaceable filters, and simple serviceability for off‑grid and emergency deployments.</p></div></div>
+          <div class="feature"><div class="dot"></div><div><h4>Energy-Efficient AWG</h4><p>Condensation stack tuned for high yield per watt with adaptive fan curves and heat-exchange design.</p></div></div>
+          <div class="feature"><div class="dot"></div><div><h4>Field-Ready Durability</h4><p>Rugged enclosure, replaceable filters, and simple serviceability for off-grid and emergency deployments.</p></div></div>
           <div class="feature"><div class="dot"></div><div><h4>Flexible Power</h4><p>Runs on portable solar + battery pack or standard AC, with smart power budgeting for day/night cycles.</p></div></div>
-          <div class="feature"><div class="dot"></div><div><h4>Low‑Maintenance Design</h4><p>Few moving parts, accessible consumables, and modular components reduce downtime and cost.</p></div></div>
+          <div class="feature"><div class="dot"></div><div><h4>Low-Maintenance Design</h4><p>Few moving parts, accessible consumables, and modular components reduce downtime and cost.</p></div></div>
         </div>
       </div>
     </section>
@@ -183,14 +180,16 @@
         <div>
           <span class="tag">Flagship</span>
           <h2 style="margin-top:10px">HydraBox — compact water from air.</h2>
-          <p class="lead">A portable, human‑carryable unit producing <strong>2–5 liters/day</strong> in typical conditions. Designed for rapid deployment in disaster relief, military, and remote communities.</p>
+          <p class="lead">A portable, human-carryable unit producing <strong>2–5 liters/day</strong> in typical conditions. Designed for rapid deployment in disaster relief, military, and remote communities.</p>
           <div style="display:flex; gap:12px; margin-top:16px; flex-wrap:wrap">
             <a class="cta" href="#contact">Partner with us</a>
-            <a class="btn-secondary" id="onepager" href="/assets/Hydratech_OnePager.pdf" target="_blank" rel="noopener">Download one‑pager (PDF)</a>
+            <!-- One-pager now points to infosheet.pdf -->
+            <a class="btn-secondary" id="onepager" href="/assets/infosheet.pdf" target="_blank" rel="noopener">Download one-pager (PDF)</a>
           </div>
         </div>
         <div>
-          <img src="/assets/product-render.png" alt="HydraBox prototype with solar module on water container" />
+          <!-- Swap in your new flagship image -->
+          <img src="/assets/hydrabox-flagship.png" alt="HydraBox flagship render with trident logo and side solar panel" />
         </div>
       </div>
     </section>
@@ -203,12 +202,12 @@
             <li>Q1: Bench prototypes validating condensation stack and airflow tuning</li>
             <li>Q2: Integrated field prototype; environmental testing and yield mapping</li>
             <li>Q3: Solar pack optimization; ruggedized enclosure; manufacturability study</li>
-            <li>Q4: Pilot deployments with partners; data‑driven iteration</li>
+            <li>Q4: Pilot deployments with partners; data-driven iteration</li>
           </ul>
         </div>
         <div>
           <h2>We build in the open, with intent.</h2>
-          <p class="lead">Our approach is pragmatic: test, measure, iterate. We partner with engineers, researchers, and NGOs to accelerate real‑world reliability and impact.</p>
+          <p class="lead">Our approach is pragmatic: test, measure, iterate. We partner with engineers, researchers, and NGOs to accelerate real-world reliability and impact.</p>
         </div>
       </div>
     </section>
@@ -217,7 +216,7 @@
       <div class="container two grid">
         <div>
           <h2>Partners & Investors</h2>
-          <p class="lead">We’re assembling a network to accelerate R&D, pilot deployments, and scaled manufacturing. If you’re an engineer, researcher, investor, or mission‑driven organization, let’s talk.</p>
+          <p class="lead">We’re assembling a network to accelerate R&D, pilot deployments, and scaled manufacturing. If you’re an engineer, researcher, investor, or mission-driven organization, let’s talk.</p>
           <div style="margin-top:14px"><a class="cta" href="#contact">Start a conversation</a></div>
         </div>
         <div class="card">
@@ -250,7 +249,7 @@
         <span>© 2025 Hydratech Industries LLC — All rights reserved.</span>
       </div>
       <div class="pill-row">
-        <a class="link" href="#about">About</a>
+        <a class="link" href="/about.html">About</a>
         <a class="link" href="#technology">Technology</a>
         <a class="link" href="#hydrabox">HydraBox</a>
       </div>
@@ -260,20 +259,18 @@
   <script>
     function toggleMenu(){
       const el = document.getElementById('menu');
-      el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+      const showing = window.getComputedStyle(el).display !== 'none';
+      el.style.display = showing ? 'none' : 'block';
     }
 
-    // Graceful one-pager hint – if the PDF isn't present yet, visually soften the button (prevents "broken" feel)
+    // Soften the button if the PDF isn't present yet
     (function(){
       const a = document.getElementById('onepager');
       if(!a) return;
-      // Try a lightweight fetch to see if file exists (same-origin only). If 404, dim button.
       fetch(a.getAttribute('href'), {method:'HEAD'})
-        .then(r=>{ if(!r.ok){ a.style.opacity = .5; a.title = 'Upload /assets/Hydratech_OnePager.pdf to enable this link.'; }})
-        .catch(()=>{ a.style.opacity = .5; a.title = 'Upload /assets/Hydratech_OnePager.pdf to enable this link.'; });
+        .then(r=>{ if(!r.ok){ a.style.opacity = .5; a.title = 'Upload /assets/infosheet.pdf to enable this link.'; }})
+        .catch(()=>{ a.style.opacity = .5; a.title = 'Upload /assets/infosheet.pdf to enable this link.'; });
     })();
   </script>
 </body>
 </html>
-<!-- rebuild -->
-<!-- rebuild -->

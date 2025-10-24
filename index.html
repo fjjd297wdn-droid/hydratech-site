@@ -181,28 +181,36 @@
       </div>
     </section>
 
-    <section id="hydrabox">
-      <div class="container product">
-        <div>
-          <span class="tag">Flagship</span>
-          <h2 style="margin-top:10px">HydraBox — compact water from air.</h2>
-          <p class="lead">A portable, human-carryable unit producing <strong>2–5 liters/day</strong> in typical conditions. Designed for rapid deployment in disaster relief, military, and remote communities.</p>
-          <div style="display:flex; gap:12px; margin-top:16px; flex-wrap:wrap">
-            <a class="cta" href="#contact">Partner with us</a>
-           <!-- One-pager button -->
-<a class="btn-secondary" id="onepager"
-   href="/assets/one-pager.pdf?v=2"  <!-- note ?v=2 to bust cache -->
-   target="_blank" rel="noopener">
-  Download one-pager (PDF)
-</a>
+   <section id="hydrabox">
+  <div class="container product">
+    <div>
+      <span class="tag">Flagship</span>
+      <h2 style="margin-top:10px">HydraBox — compact water from air.</h2>
+      <p class="lead">
+        A portable, human-carryable unit producing <strong>2–5 liters/day</strong> in typical
+        conditions. Designed for rapid deployment in disaster relief, military, and remote
+        communities.
+      </p>
 
-<!-- Product image -->
-<img src="/assets/hydrabox-official.png"
-     alt="Official HydraBox product photo with trident emblem and solar panel"
-     loading="lazy" />
-        </div>
+      <div style="display:flex; gap:12px; margin-top:16px; flex-wrap:wrap">
+        <a class="cta" href="#contact">Partner with us</a>
+
+        <!-- ✅ Fixed: Complete working button -->
+        <a class="btn-secondary" id="onepager"
+           href="/assets/one-pager.pdf"
+           target="_blank" rel="noopener">
+          Download one-pager (PDF)
+        </a>
       </div>
-    </section>
+
+      <!-- ✅ Correct image placement -->
+      <img src="/assets/hydrabox-official.png"
+           alt="Official HydraBox product photo with trident emblem and solar panel"
+           loading="lazy"
+           style="width:100%; border-radius:18px; border:1px solid var(--line); box-shadow:var(--shadow)" />
+    </div>
+  </div>
+</section>
 
     <section id="rd">
       <div class="container two grid" style="align-items:center">

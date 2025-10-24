@@ -104,7 +104,19 @@
 
     .link{color:var(--accent); font-weight:600; border-bottom:1px solid #bcd9ff; padding-bottom:2px}
     .btn-secondary{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:12px; border:1px solid var(--line); background:#fff; font-weight:600}
-
+/* About teaser alignment */
+.about-preview{
+  text-align:center;
+  padding: 12px 0;
+}
+.about-preview h2{
+  margin: 0 0 8px;
+}
+.about-preview p{
+  max-width: 760px;
+  margin: 8px auto 18px; /* centers it under the title */
+  color: var(--muted);
+}
     /* Mobile sheet — HIDE by default on all sizes to prevent duplicate links on desktop */
     .sheet{display:none}
     @media (max-width:880px){
@@ -154,13 +166,13 @@
     </section>
 
     <!-- About teaser (links to full about page) -->
-    <section id="about">
-      <div class="container" style="text-align:center">
-        <h2>About Hydratech Industries</h2>
-        <p class="lead">Learn more about our mission and story.</p>
-        <a class="cta" href="/about.html">Read more</a>
-      </div>
-    </section>
+   <section id="about">
+  <div class="container about-preview">
+    <h2>About Hydratech Industries</h2>
+    <p>Learn more about our mission and story.</p>
+    <a class="cta" href="/about.html">Read more</a>
+  </div>
+</section>
 
     <section id="technology">
       <div class="container">
@@ -184,13 +196,15 @@
           <div style="display:flex; gap:12px; margin-top:16px; flex-wrap:wrap">
             <a class="cta" href="#contact">Partner with us</a>
             <!-- One-pager now points to infosheet.pdf -->
-            <a class="btn-secondary" id="onepager" href="/assets/infosheet.pdf" target="_blank" rel="noopener">Download one-pager (PDF)</a>
-          </div>
+<a class="btn-secondary" id="onepager" href="/assets/one-pager.pdf" target="_blank" rel="noopener">
+  Download one-pager (PDF)
+</a>          </div>
         </div>
         <div>
           <!-- Swap in your new flagship image -->
-          <img src="/assets/hydrabox-flagship.png" alt="HydraBox flagship render with trident logo and side solar panel" />
-        </div>
+<img src="/assets/hydrabox-official.png"
+     alt="Official HydraBox product photo with trident emblem and solar panel"
+     loading="lazy" />        </div>
       </div>
     </section>
 
@@ -268,9 +282,8 @@
       const a = document.getElementById('onepager');
       if(!a) return;
       fetch(a.getAttribute('href'), {method:'HEAD'})
-        .then(r=>{ if(!r.ok){ a.style.opacity = .5; a.title = 'Upload /assets/infosheet.pdf to enable this link.'; }})
-        .catch(()=>{ a.style.opacity = .5; a.title = 'Upload /assets/infosheet.pdf to enable this link.'; });
-    })();
+  .then(r=>{ if(!r.ok){ a.style.opacity = .5; a.title = 'Upload /assets/one-pager.pdf to enable this link.'; }})
+  .catch(()=>{ a.style.opacity = .5; a.title = 'Upload /assets/one-pager.pdf to enable this link.'; });
   </script>
 </body>
 </html>
